@@ -1,8 +1,8 @@
 {
   "projectName": "myProject",
   "currScene": "chess-world",
-  "currFrame": "front",
-  "loadURL": "http://localhost:8081/vr/?1498353671407",
+  "currFrame": "left",
+  "loadURL": "http://localhost:8081/vr/?1498761667225",
   "scenes": {
     "island-garden": {
       "imageURL": "island-garden.jpg",
@@ -110,7 +110,7 @@
           "template": "TitleFrame",
           "title": "LIGHT SHOWS IN THE PARK",
           "subtitle": "FRONT FRONT FRONT",
-          "navleft": "left",
+          "navleft": "right",
           "navright": "right"
         },
         "right": {
