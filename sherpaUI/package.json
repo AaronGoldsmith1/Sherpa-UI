@@ -1,15 +1,13 @@
 {
   "name": "sherpa-ui",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "main": "main.js",
   "scripts": {
     "start": "electron -r babel-register . && node reactVR/node_modules/react-native/local-cli/cli.js start",
     "bundle": "cd reactVR && npm run bundle",
     "dist": "build",
-    "pack": "build --dir",
-    "postinstall": "cd reactVR && npm install"
+    "pack": "build --dir"
   },
-  "preferGlobal": true,
   "dependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
