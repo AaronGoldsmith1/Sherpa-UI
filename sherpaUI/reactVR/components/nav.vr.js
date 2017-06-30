@@ -7,7 +7,7 @@ export default class Nav extends Component {
     }
 
   render() {
-    let multiplier = this.props.direction === 'left' ? 1 : -1;
+    let multiplier = this.props.direction === 'left' ? -1 : +1;
     return (
         <View style={{
                 flex: 1,

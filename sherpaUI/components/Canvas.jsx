@@ -28,7 +28,7 @@ let styles = {
         backgroundColor: 'grey',
         width: '55%',
         height: 'auto',
-        minWidth: '300px',
+        minWidth: '575px',
         margin: '0.5% 0',
         position:'relative'
     },

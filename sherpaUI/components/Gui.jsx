@@ -4,8 +4,16 @@ import Page from '../components/Page';
 import Canvas from '../components/Canvas';
 import Properties from '../components/Properties';
 import Image from '../components/Image';
+import TemplatePicker from '../components/TemplatePicker'
 
 class Gui extends Component {
+    constructor() {
+        super()
+        this.state = {
+            backgroundColor: '#bdc2d8',
+            color: '#1e2538'
+        }
+    }
 
     render() {
         return (
@@ -50,12 +58,20 @@ class Gui extends Component {
                     loadURL={this.props.loadURL}
                     openWindow={this.props.openWindow}
                 />
-                <Properties
-                    data={this.props.data}
-                    updateName={this.props.updateName}
-                    updateProperties={this.props.updateProperties}
-                    writeToFile={this.props.writeToFile} />
-
+                <div style={styles.templateContainer}>
+                    <div style={styles.propertiesContainer}>
+                        <Properties
+                            data={this.props.data}
+                            updateName={this.props.updateName}
+                            updateProperties={this.props.updateProperties}
+                            writeToFile={this.props.writeToFile}
+                        />
+                    </div>
+                    <TemplatePicker
+                        data={this.props.data}
+                        changeTemplate={this.props.changeTemplate}
+                    />
+                </div>
             </div>
         )
     }
@@ -78,6 +94,18 @@ let styles = {
         flexDirection: 'column',
         justifyContent: 'space-around',
         padding: '0.2%'
+    },
+    propertiesContainer: {
+        height: '800px',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '0'
+    },
+    templateContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '25%'
     }
 }
 

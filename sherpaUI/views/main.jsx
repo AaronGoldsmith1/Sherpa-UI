@@ -13,6 +13,7 @@ const dialog = require('electron').remote.dialog;
 const { BrowserWindow } = require('electron').remote
 
 
+
 export default class Main extends Component {
   constructor() {
     super();
@@ -30,6 +31,7 @@ export default class Main extends Component {
     this.changeScene = this.changeScene.bind(this)
     this.addScene = this.addScene.bind(this)
     this.deleteScene = this.deleteScene.bind(this)
+    this.changeTemplate = this.changeTemplate.bind(this)
   }
 
   addScene(scene) {
@@ -71,7 +73,6 @@ export default class Main extends Component {
   }
 
   changeScene(scene) {
-    console.log('scene', scene)
     let _this = this;
     this.setState({ currScene: scene }, () => {
       fs.writeFile('./reactVR/obj.json', JSON.stringify(_this.state, null, 2), 'utf8', () => {
@@ -114,6 +115,21 @@ export default class Main extends Component {
     }).then(() => {
       _this.setState({
         loadURL: _this.state.loadURL + Date.now()
+      });
+    })
+  }
+
+  changeTemplate(template) {
+    let _this = this;
+    let newState = this.state;
+    newState.scenes[newState.currScene].frames[newState.currFrame].template = template;
+    newState.currTemplate = template;
+    this.setState(newState, () => {
+      fs.writeFile('./reactVR/obj.json', JSON.stringify(_this.state, null, 2), 'utf8', () => {
+        console.log('Writing Changes to File')
+        _this.setState({
+          loadURL: "http://localhost:8081/vr/?" + Date.now()
+        })
       });
     })
   }
@@ -223,6 +239,7 @@ export default class Main extends Component {
           changeScene={this.changeScene}
           addScene={this.addScene}
           deleteScene={this.deleteScene}
+          changeTemplate={this.changeTemplate}
         ></Gui>
         <div id="footer" style={styles.footer}></div>
       </div >

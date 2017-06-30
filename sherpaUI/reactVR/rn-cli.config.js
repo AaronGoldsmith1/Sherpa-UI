@@ -2,6 +2,7 @@
 
 var path = require('path');
 var blacklist = require('./node_modules/react-native/packager/blacklist');
+require('./node_modules/react-native/local-cli/cli.js')
 
 var config = {
   getProjectRoots() {

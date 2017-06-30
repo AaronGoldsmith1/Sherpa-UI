@@ -9,6 +9,7 @@ const defaultMenu = require('electron-default-menu');
 const {webContents} = require('electron')
 
 let mainWindow = null;
+childProcess.exec('node reactVR/node_modules/react-native/local-cli/cli.js start')
 
 app.on('window-all-closed', () => {
   if (process.platform != 'darwin') {
@@ -38,7 +39,6 @@ menu.splice(4, 0, {
   ]
 })
 
-childProcess.exec('node reactVR/node_modules/react-native/local-cli/cli.js start')
 mainWindow = new BrowserWindow({
   width: 1200,
   height: 800

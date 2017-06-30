@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import Attribute from '../components/Attribute';
+import templates from '../components/frame_templates/FrameTemplates';
 
 class CoordinatesAndScaling extends Component {
     render() {
+        const TemplateFrame = templates[this.props.data.scenes[this.props.data.currScene].frames[this.props.data.currFrame].template]
+        console.log('template frame',TemplateFrame)
         return (
             <div style={styles.properties}>
-                <Attribute 
-                data={this.props.data}
-                updateProperties = {this.props.updateProperties}
-                writeToFile = {this.props.writeToFile}
+                <TemplateFrame
+                    data={this.props.data}
+                    updateProperties={this.props.updateProperties}
+                    writeToFile={this.props.writeToFile}
                 />
             </div>
         )
@@ -18,8 +20,8 @@ class CoordinatesAndScaling extends Component {
 let styles = {
     properties: {
         width: '100%',
-        height: 'auto'
-        
+        height: '100%',
+        overflow: 'scroll'
     }
 }
 

@@ -1,8 +1,15 @@
 {
   "projectName": "myProject",
+<<<<<<< HEAD
   "currScene": "chess-world",
   "currFrame": "left",
   "loadURL": "http://localhost:8081/vr/?1498761667225",
+=======
+  "currScene": "island-garden",
+  "currFrame": "front",
+  "currTemplate": "TextFrame",
+  "loadURL": "http://localhost:8081/vr/?14987796137171498779616421",
+>>>>>>> c1949bec742a907f826992abdcb4fdf011b95035
   "scenes": {
     "island-garden": {
       "imageURL": "island-garden.jpg",
@@ -12,7 +19,8 @@
           "title": "Hello World update all the time?!",
           "subtitle": "FRONT FRONT FRONT",
           "navleft": "left",
-          "navright": "right"
+          "navright": "right",
+          "text": "sajhdfjlas"
         },
         "right": {
           "template": "TextFrame",
@@ -23,7 +31,7 @@
         },
         "back": {
           "template": "TextFrame",
-          "title": "Hello World update all the time?!h",
+          "title": "Hello World update all the time?",
           "text": "BACK BACK BACK",
           "navleft": "left",
           "navright": "right"
@@ -38,7 +46,7 @@
       }
     },
     "starry-sky": {
-      "imageURL": "starry-sky.jpg",
+      "imageURL": "winter-outdoor.jpg",
       "frames": {
         "front": {
           "template": "TitleFrame",
@@ -55,7 +63,7 @@
           "navright": "right"
         },
         "back": {
-          "template": "TextFrame",
+          "template": "TitleFrame",
           "title": "SNOWMAN",
           "text": "BACK BACK BACK",
           "navleft": "left",
