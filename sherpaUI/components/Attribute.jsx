@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { TextInput } from 'react-desktop/macOs';
-import ColorButton from '../components/ColorButton'
+//import ColorButton from '../components/ColorButton'
 
 class Attribute extends Component {
   constructor(props) {
@@ -92,7 +92,7 @@ class Attribute extends Component {
 
 
                 </div>
-                <ColorButton />
+                { /* <ColorButton /> */ }
 
 
             </div>
