@@ -3,7 +3,7 @@
 ### A VR Website Builder
 
 ## To run on your local machine
-* Install module `npm install sherap-ui`
+* Install module `npm install sherpa-ui`
 * cd into repository `cd sherpaUI`
 * install dependencies `npm install`
 * run the app `npm start`

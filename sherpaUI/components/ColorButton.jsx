@@ -29,13 +29,11 @@ class ColorButton extends React.Component {
     const popover = {
       position: 'absolute',
       zIndex: '2',
+      height: '30px',
+
     }
     const cover = {
-      position: 'fixed',
-      top: '0px',
-      right: '0px',
-      bottom: '0px',
-      left: '0px',
+      position: 'fixed'
     }
     return (
       <div>

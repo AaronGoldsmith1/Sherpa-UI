@@ -1,6 +1,6 @@
 {
   "name": "sherpa-ui",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "main": "main.js",
   "scripts": {
     "start": "electron -r babel-register . && node reactVR/node_modules/react-native/local-cli/cli.js start",
@@ -8,6 +8,11 @@
     "dist": "build",
     "pack": "build --dir"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshwolters12/Sherpa-UI.git"
+  },
+   "homepage": "https://github.com/joshwolters12/Sherpa-UI#readme",
   "dependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
